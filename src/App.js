@@ -1,18 +1,25 @@
-import logo from "./logo.svg";
 import "./App.css";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 
 function App() {
+	const [trails, setTrails] = useState([]);
+	console.log(trails);
+	useEffect(() => {
+		fetch("http://localhost:3004/trails")
+			.then((r) => r.json())
+			.then((data) => setTrails(data));
+	}, []);
+
 	return (
 		<div>
 			<NavBar />
 			<Switch>
 				<Route path="/">
-					<Home />
+					<Home trails={trails} />
 				</Route>
 			</Switch>
 		</div>
