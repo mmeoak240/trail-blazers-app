@@ -3,7 +3,10 @@ import TrailCard from "./TrailCard";
 
 const TrailsContainer = ({ trails }) => {
 	const displayTrails = trails.map((trail) => <TrailCard trail={trail} />);
-	return <ul className="cards">{displayTrails}</ul>;
+ 
+	return (<div class="container">
+    <ul className="cards">{displayTrails}</ul>
+    </div>
 };
 
 export default TrailsContainer;
