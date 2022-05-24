@@ -5,7 +5,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/20008663/trail-us-california-mills-peak-trail-at-map-20008663-1645026988-1200x630-3-6.jpg",
 			"name": "Mills Peak",
 			"location": "Downieville, California",
-			"difficulty": 3
+			"difficulty": 3,
+			"description": "This seven mile trail takes off from the Mills Peak Lookout and heads downhill through a predominately conifer forest, offering some beautiful views. Open for hiking, biking and horseback riding."
 		},
 
 		{
@@ -13,7 +14,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/72351325/trail-us-new-mexico-south-boundary-trail-angel-fire-to-taos-at-map-72351325-1645169275-1200x630-3-6.jpg",
 			"name": "South Boundry",
 			"location": "Taos, New Mexico",
-			"difficulty": 2
+			"difficulty": 2,
+			"description": "The South Boundary Trail is an incredible tour of the Sangre de Cristo Range that takes you across ridges, valleys, and over several peaks, through gorgeous conifer forests and incredible stands of aspen. "
 		},
 
 		{
@@ -21,7 +23,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/75547344/trail-us-oregon-tamolitch-blue-pool-via-mckenzie-river-trail-at-map-75547344-1645044808-1200x630-3-6.jpg",
 			"name": "Mckenzie River Trail",
 			"location": "Blue River, Oregon",
-			"difficulty": 1
+			"difficulty": 1,
+			"description": "A scenic trail with a lake on one side and rocky hills on the other. An old, partially abandoned road through the forest, doubletrack for the most part and singletrack only in the last 100 yd. The end is elevated and offers views of Blue River Lake with Deathball Mountain and Katsuk Butte in the horizon."
 		},
 
 		{
@@ -29,7 +32,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/73428463/trail-us-idaho-goat-lake-and-goat-falls-via-iron-creek-trail-alpine-way-trail-at-map-73428463-1622527905-1200x630-3-6.jpg",
 			"name": "Goat Lake",
 			"location": "Sawtooth City, Idaho",
-			"difficulty": 4
+			"difficulty": 4,
+			"description": "This trail starts on a well defined path and ends with a scramble. The entire trail is uphill and the end is the most challenging, but the views along the way and the lake itself are well worth the hard work."
 		},
 
 		{
@@ -37,7 +41,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/108125188/trail-us-arizona-chapel-trail-to-broken-arrow-trail-to-mystic-trail-loop-at-map-108125188-1647646822-1200x630-3-6.jpg",
 			"name": "Broken Arrow",
 			"location": "Sedona, Arizona",
-			"difficulty": 3
+			"difficulty": 3,
+			"description": "Although fairly short, the Broken Arrow Trail is considered one of the best jeep roads in Arizona. It is extremely fun to drive, hike, or ride, and the red rock scenery is out of this world."
 		},
 
 		{
@@ -45,7 +50,8 @@
 			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/72351325/trail-us-new-mexico-south-boundary-trail-angel-fire-to-taos-at-map-72351325-1645169275-1200x630-3-6.jpg",
 			"name": "Dakota Ridge Trail",
 			"location": "Denver, Colorado",
-			"difficulty": 5
+			"difficulty": 5,
+			"description": "The Dakota Ridge Trail is a technical trail that follows along the top of the Dakota Ridge formation. Along the way, you'll find many rocks and drops, as the sandstone often weathers in stair-step like features. Be warned, there is one extremely steep portion that riders will need to portage."
 		}
 	]
 }

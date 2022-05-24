@@ -46,3 +46,9 @@ code {
 		width: calc(20% - 2rem);
 	}
 }
+
+.center {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
