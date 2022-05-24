@@ -1,8 +1,51 @@
 {
 	"trails": [
-		{ "id": 1, "name": "Bunny boulder" },
-		{ "id": 1, "name": "rocky reels" },
-		{ "id": 1, "name": "deaths hill" },
-		{ "id": 1, "name": "i dont know" }
+		{
+			"id": 1,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/20008663/trail-us-california-mills-peak-trail-at-map-20008663-1645026988-1200x630-3-6.jpg",
+			"name": "Mills Peak",
+			"location": "Downieville, California",
+			"difficulty": 3
+		},
+
+		{
+			"id": 2,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/72351325/trail-us-new-mexico-south-boundary-trail-angel-fire-to-taos-at-map-72351325-1645169275-1200x630-3-6.jpg",
+			"name": "South Boundry",
+			"location": "Taos, New Mexico",
+			"difficulty": 2
+		},
+
+		{
+			"id": 3,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/75547344/trail-us-oregon-tamolitch-blue-pool-via-mckenzie-river-trail-at-map-75547344-1645044808-1200x630-3-6.jpg",
+			"name": "Mckenzie River Trail",
+			"location": "Blue River, Oregon",
+			"difficulty": 1
+		},
+
+		{
+			"id": 4,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/73428463/trail-us-idaho-goat-lake-and-goat-falls-via-iron-creek-trail-alpine-way-trail-at-map-73428463-1622527905-1200x630-3-6.jpg",
+			"name": "Goat Lake",
+			"location": "Sawtooth City, Idaho",
+			"difficulty": 4
+		},
+
+		{
+			"id": 5,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/108125188/trail-us-arizona-chapel-trail-to-broken-arrow-trail-to-mystic-trail-loop-at-map-108125188-1647646822-1200x630-3-6.jpg",
+			"name": "Broken Arrow",
+			"location": "Sedona, Arizona",
+			"difficulty": 3
+		},
+
+		{
+			"id": 6,
+			"image": "http://cdn-assets.alltrails.com/static-map/production/at-map/72351325/trail-us-new-mexico-south-boundary-trail-angel-fire-to-taos-at-map-72351325-1645169275-1200x630-3-6.jpg",
+			"name": "Dakota Ridge Trail",
+			"location": "Denver, Colorado",
+			"difficulty": 5
+		}
 	]
 }
