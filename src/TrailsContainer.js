@@ -4,6 +4,7 @@ import TrailCard from "./TrailCard";
 import TrailDescription from "./TrailDescription";
 
 const TrailsContainer = ({ trails }) => {
+	const match = useRouteMatch();
 	const displayTrails = trails.map((trail) => (
 		<TrailCard trail={trail} trails={trails} />
 	));
@@ -12,7 +13,11 @@ const TrailsContainer = ({ trails }) => {
 			<h1 style={{ color: "sienna" }} className="center">
 				Blaze These Trails
 			</h1>
-			<ul className="cards">{displayTrails}</ul>;
+			<ul className="cards">{displayTrails}</ul>
+			<Route path={`${match.url}/:trailId`}>
+				<TrailDescription trails={trails} />
+			</Route>
+			;
 		</div>
 	);
 };
