@@ -15,9 +15,6 @@ const TrailsContainer = ({ trails }) => {
 				Blaze These Trails
 			</h1>
 			<ul className="cards">{displayTrails}</ul>;
-			<Route path={`${match.url}/:trailId`}>
-				<TrailDescription trails={trails} />
-			</Route>
 		</div>
 	);
 };
