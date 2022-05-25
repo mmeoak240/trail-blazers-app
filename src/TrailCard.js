@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { Route, useRouteMatch } from "react-router-dom";
+import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
+	const match = useRouteMatch();
 	const renderDescription = Object.keys(trails).map((trailId) => (
 		<div>
 			<NavLink to={`/traillist/${trailId}`}>
