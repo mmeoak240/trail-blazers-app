@@ -5,8 +5,7 @@ import TrailDescription from "./TrailDescription";
 const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
 
-	console.log(Object.keys(trails));
-	const renderDescription = Object.keys(trails).map((trailId) => (
+	const renderDescription = trails.map((trailId) => (
 		<div key={trail.id}>
 			<NavLink to={`/traillist/${trailId}`}>
 				<li className="card">
@@ -20,9 +19,6 @@ const TrailCard = ({ trail, trails }) => {
 					</p>
 				</li>
 			</NavLink>
-			<Route path={`${match.url}/:trailId`}>
-				<TrailDescription trails={trails} />
-			</Route>
 		</div>
 	));
 
