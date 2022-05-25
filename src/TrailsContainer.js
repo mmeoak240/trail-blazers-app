@@ -14,10 +14,7 @@ const TrailsContainer = ({ trails }) => {
 			<h1 style={{ color: "sienna" }} className="center">
 				Blaze These Trails
 			</h1>
-			<Route exact path={match.url}>
-				<ul className="cards">{displayTrails}</ul>;
-			</Route>
-
+			<ul className="cards">{displayTrails}</ul>;
 			<Route path={`${match.url}/:trailId`}>
 				<TrailDescription trails={trails} />
 			</Route>
