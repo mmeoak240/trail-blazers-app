@@ -12,7 +12,7 @@ const TrailsContainer = ({ trails }) => {
 	return (
 		<div className="container">
 			<h1 style={{ color: "sienna" }} className="center">
-				Trail Blazers
+				Blaze These Trails
 			</h1>
 			<Route exact path={match.url}>
 				<ul className="cards">{displayTrails}</ul>;

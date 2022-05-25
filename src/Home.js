@@ -7,7 +7,9 @@ const Home = ({ trails }) => {
 				height: 1000,
 			}}
 		>
-			Testing
+			<h1 style={{ color: "sienna" }} className="center">
+				Trail Blazers
+			</h1>
 		</div>
 	);
 };

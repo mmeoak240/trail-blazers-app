@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import TrailsContainer from "./TrailsContainer";
 
 function App() {
 	const [trails, setTrails] = useState([]);
@@ -17,7 +18,10 @@ function App() {
 		<div>
 			<NavBar />
 			<Switch>
-				<Route path="/">
+				<Route path="/traillist">
+					<TrailsContainer trails={trails} />
+				</Route>
+				<Route exact path="/">
 					<Home trails={trails} />
 				</Route>
 			</Switch>
