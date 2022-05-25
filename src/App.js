@@ -18,7 +18,7 @@ function App() {
 		<div>
 			<NavBar />
 			<Switch>
-				<Route exact path="/traillist">
+				<Route path="/traillist">
 					<TrailsContainer trails={trails} />
 				</Route>
 				<Route exact path="/">
