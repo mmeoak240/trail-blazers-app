@@ -8,9 +8,9 @@ const TrailsContainer = ({ trails }) => {
 	const displayTrails = trails.map((trail) => (
 		<TrailCard trail={trail} trails={trails} />
 	));
-
+	console.log(match.url);
 	return (
-		<div class="container">
+		<div className="container">
 			<h1 style={{ color: "sienna" }} className="center">
 				Trail Blazers
 			</h1>

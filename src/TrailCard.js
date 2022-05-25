@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
 
 const TrailCard = ({ trail, trails }) => {
-	// const [id, image, name, location, difficulty] = trail;
-const renderDescription = Object.keys(trails).map((trailId) =>)
-	return (
-		<NavLink>
+	const renderDescription = Object.keys(trails).map((trailId) => (
+		<NavLink to={`/trails/${trailId}`}>
 			<li key={trail.id} className="card">
 				<img src={trail.image} alt={trail.name} />
 				<h4>{trail.name}</h4>
@@ -16,7 +14,9 @@ const renderDescription = Object.keys(trails).map((trailId) =>)
 				</p>
 			</li>
 		</NavLink>
-	);
+	));
+
+	return <ul>{renderDescription}</ul>;
 };
 
 export default TrailCard;

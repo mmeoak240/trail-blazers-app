@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 	return (
-		<div class="nav-wrapper">
+		<div className="nav-wrapper">
 			<nav style={{ background: "sienna" }}>
 				<NavLink style={{ marginRight: "10px" }} to="#">
 					Home

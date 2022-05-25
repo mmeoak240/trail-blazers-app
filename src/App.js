@@ -7,7 +7,6 @@ import Home from "./Home";
 
 function App() {
 	const [trails, setTrails] = useState([]);
-	console.log(trails);
 	useEffect(() => {
 		fetch("http://localhost:3004/trails")
 			.then((r) => r.json())
