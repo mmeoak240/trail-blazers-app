@@ -4,9 +4,9 @@ import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
-	const renderDescription = [...trails];
+
 	console.log(Object.keys(trails));
-	Object.keys(renderDescription).map((trailId) => (
+	const renderDescription = Object.keys(trails).map((trailId) => (
 		<div key={trail.id}>
 			<NavLink to={`/traillist/${trailId}`}>
 				<li className="card">
