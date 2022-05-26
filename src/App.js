@@ -6,6 +6,10 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import TrailsContainer from "./TrailsContainer";
 
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+
 function App() {
 	const [trails, setTrails] = useState([]);
 	useEffect(() => {

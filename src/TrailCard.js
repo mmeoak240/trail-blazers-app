@@ -6,9 +6,10 @@ const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
 	const renderDescription = (
 		<div key={trail.id}>
-			<NavLink to={`/traillist/${trail.id}`}>
-				<li className="card">
+			<li className="card">
+				<NavLink to={`/traillist/${trail.id}`}>
 					<img src={trail.image} alt={trail.name} />
+
 					<h4>{trail.name}</h4>
 					<p>
 						<strong>Location:</strong> {trail.location}
@@ -16,8 +17,8 @@ const TrailCard = ({ trail, trails }) => {
 					<p>
 						<strong>Difficulty:</strong> {trail.difficulty}
 					</p>
-				</li>
-			</NavLink>
+				</NavLink>
+			</li>
 		</div>
 	);
 	return <ul>{renderDescription}</ul>;
