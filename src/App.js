@@ -15,7 +15,7 @@ function App() {
 	}, []);
 
 	return (
-		<div>
+		<div id="trailWrap">
 			<NavBar />
 			<Switch>
 				<Route path="/traillist">

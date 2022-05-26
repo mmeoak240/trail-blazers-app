@@ -9,7 +9,7 @@ const TrailsContainer = ({ trails }) => {
 		<TrailCard trail={trail} trails={trails} />
 	));
 	return (
-		<div className="container" id="trailWrap">
+		<div className="container">
 			<h1 style={{ color: "sienna" }} className="center">
 				Blaze These Trails
 			</h1>
