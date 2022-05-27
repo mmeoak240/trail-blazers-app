@@ -21,6 +21,9 @@ function App() {
 				<Route path="/traillist">
 					<TrailsContainer trails={trails} />
 				</Route>
+				<Route path="/newtrail">
+					<NewTrail />
+				</Route>
 				<Route exact path="/">
 					<Home trails={trails} />
 				</Route>
