@@ -112,3 +112,17 @@ code {
 	grid-auto-flow: row;
 	grid-gap: -20em -20em;
 }
+
+.backgroundImg {
+	background-image: url("https://wallpaperaccess.com/full/209750.jpg");
+	background-repeat: no-repeat;
+	background-size: 1915px 2000px;
+}
+
+.searchbar {
+	margin: 0 auto;
+	display: block;
+	background: white;
+	width: 350px;
+	border-radius: 8px;
+}

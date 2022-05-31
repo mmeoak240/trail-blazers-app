@@ -2,11 +2,7 @@ import TrailsContainer from "./TrailsContainer";
 
 const Home = ({ trails }) => {
 	return (
-		<div
-			style={{
-				height: 1000,
-			}}
-		>
+		<div>
 			<h1 style={{ color: "sienna" }} className="center">
 				Trail Blazers
 			</h1>

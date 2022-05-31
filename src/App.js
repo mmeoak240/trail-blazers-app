@@ -8,6 +8,9 @@ import TrailsContainer from "./TrailsContainer";
 import NewTrail from "./NewTrail";
 
 function App() {
+	const [search, setSearch] = useState("");
+	function handleSort() {}
+
 	const [trails, setTrails] = useState([]);
 	useEffect(() => {
 		fetch("http://localhost:3004/trails")
@@ -16,11 +19,15 @@ function App() {
 	}, []);
 
 	return (
-		<div id="trailWrap">
+		<div id="trailWrap" className="backgroundImg">
 			<NavBar />
 			<Switch>
 				<Route path="/traillist">
-					<TrailsContainer trails={trails} />
+					<TrailsContainer
+						trails={trails}
+						search={search}
+						setSearch={setSearch}
+					/>
 				</Route>
 				<Route path="/newtrail">
 					<NewTrail />

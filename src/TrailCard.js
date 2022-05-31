@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Route, useRouteMatch } from "react-router-dom";
 import TrailDescription from "./TrailDescription";
@@ -11,7 +12,7 @@ const TrailCard = ({ trail, trails }) => {
 					<NavLink to={`/traillist/${trail.id}`}>
 						<img src={trail.image} alt={trail.name} />
 
-						<h4>{trail.name}</h4>
+						<h5>{trail.trailName}</h5>
 						<p>
 							<strong>Location:</strong> {trail.location}
 						</p>
@@ -19,6 +20,9 @@ const TrailCard = ({ trail, trails }) => {
 							<strong>Difficulty:</strong> {trail.difficulty}
 						</p>
 					</NavLink>
+					<Route path={`${match.url}/:trailId`}>
+						<TrailDescription trails={trails} />
+					</Route>
 				</li>
 			</div>
 		</div>
