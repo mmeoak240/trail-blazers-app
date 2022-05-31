@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Route, useRouteMatch } from "react-router-dom";
 import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
+	console.log(trail);
+
 	const renderDescription = (
 		<div key={trail.id} className="ui grid">
 			<div className="sixteen wide column">
@@ -31,9 +33,3 @@ const TrailCard = ({ trail, trails }) => {
 };
 
 export default TrailCard;
-
-{
-	/* <Route path={`${match.url}/:trailId`}>
-	<TrailDescription trails={trails} />
-</Route>; */
-}

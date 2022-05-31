@@ -9,8 +9,6 @@ const TrailsContainer = ({ trails, search, setSearch }) => {
 		trail.trailName.toLowerCase().includes(search.toLowerCase())
 	);
 
-	console.log(displayTrails);
-
 	return (
 		<div>
 			<h1 style={{ color: "sienna" }} className="center">

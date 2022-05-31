@@ -47,14 +47,6 @@
 			"location": "Denver, Colorado",
 			"difficulty": 5,
 			"description": "The Dakota Ridge Trail is a technical trail that follows along the top of the Dakota Ridge formation. Along the way, you'll find many rocks and drops, as the sandstone often weathers in stair-step like features. Be warned, there is one extremely steep portion that riders will need to portage."
-		},
-		{
-			"image": "https://trek.scene7.com/is/image/TrekBicycleProducts/Trail_MTB_mq_2018?$responsive-pjpg$&cache=on,on&wid=1920",
-			"trailName": "Crazy Trail",
-			"location": "Arizona",
-			"difficulty": "100",
-			"description": "Beautiful trail in AZ",
-			"id": 6
 		}
 	]
 }
