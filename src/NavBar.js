@@ -3,14 +3,22 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
 	return (
 		<div className="nav-wrapper">
-			<nav style={{ background: "sienna" }}>
-				<NavLink style={{ marginRight: "10px" }} to="/">
+			<nav style={{ textAlign: "center", background: "sienna" }}>
+				<NavLink style={{ marginRight: "30px", fontSize: "20px" }} to="/">
 					Home
 				</NavLink>
-				<NavLink style={{ marginRight: "10px" }} to="/traillist">
+				<NavLink
+					style={{ marginRight: "30px", fontSize: "20px" }}
+					to="/traillist"
+				>
 					Trails
 				</NavLink>
-				<NavLink to="/newtrail">Add Trail</NavLink>
+				<NavLink
+					style={{ marginRight: "30px", fontSize: "20px" }}
+					to="/newtrail"
+				>
+					Add Trail
+				</NavLink>
 			</nav>
 		</div>
 	);
