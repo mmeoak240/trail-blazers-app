@@ -1,22 +1,38 @@
 import React, { useState } from "react";
 
 const NewTrail = () => {
-	const [image, setimage] = useState("");
-	const [trailName, setTrailName] = useState("");
-	const [location, setLocation] = useState("");
-	const [difficulty, setDifficulty] = useState("");
-	const [description, setDescription] = useState("");
+	const [formData, setFormData] = useState({
+		image: "",
+		trailName: "",
+		location: "",
+		difficulty: "",
+		description: "",
+	});
 
-	// console.log(formData);
+	function handleChange(e) {
+		setFormData({
+			...formData,
+			[e.target.id]: e.target.value,
+		});
+
+		// console.log(formData);
+	}
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		// console.log(e.target.value);
+		addTrail(formData);
 	}
 
-	function handleChange(e) {
-		setTrailName(e.target.value);
-		console.log(e.target.value);
+	function addTrail(newTrail) {
+		fetch("http://localhost:3004/trails", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(newTrail),
+		})
+			.then((res) => res.json)
+			.then((trail) => console.log(trail));
 	}
 
 	return (
@@ -24,43 +40,42 @@ const NewTrail = () => {
 			<label className="create">Image</label>
 			<input
 				className="create"
-				subject="image"
+				id="image"
 				type="text"
 				onChange={handleChange}
-				value={image}
+				value={formData.image}
 			/>
 			<label className="create">Trail Name</label>
 			<input
-				id="test"
 				className="create"
-				subject="trailName"
+				id="trailName"
 				type="text"
 				onChange={handleChange}
-				value={trailName}
+				value={formData.trailName}
 			/>
 			<label className="create">Location</label>
 			<input
 				className="create"
-				subject="location"
+				id="location"
 				type="text"
 				onChange={handleChange}
-				value={location}
+				value={formData.location}
 			/>
 			<label className="create">Difficulty</label>
 			<input
 				className="create"
-				subject="difficulty"
+				id="difficulty"
 				type="text"
 				onChange={handleChange}
-				value={difficulty}
+				value={formData.difficulty}
 			/>
 			<label className="create">Description</label>
 			<input
 				className="create"
-				subject="description"
+				id="description"
 				type="text"
 				onChange={handleChange}
-				value={description}
+				value={formData.description}
 			/>
 			<button className="create-button" type="submit">
 				Submit
@@ -90,3 +105,9 @@ export default NewTrail;
 // 		[subject]: value,
 // 	});
 // }
+
+// const [image, setimage] = useState("");
+// const [trailName, setTrailName] = useState("");
+// const [location, setLocation] = useState("");
+// const [difficulty, setDifficulty] = useState("");
+// const [description, setDescription] = useState("");

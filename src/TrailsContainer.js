@@ -9,12 +9,12 @@ const TrailsContainer = ({ trails }) => {
 		<TrailCard trail={trail} trails={trails} />
 	));
 	return (
-		<div className="trailGrid">
+		<div>
 			<h1 style={{ color: "sienna" }} className="center">
 				Blaze These Trails
 			</h1>
 
-			<div>
+			<div id="trailContainer">
 				{displayTrails}
 				<Route path={`${match.url}/:trailId`}>
 					<TrailDescription trails={trails} />
