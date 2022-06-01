@@ -5,7 +5,7 @@ import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
-	console.log(trail);
+	console.log(trails.id);
 
 	const renderDescription = (
 		<div key={trail.id} className="ui grid">
