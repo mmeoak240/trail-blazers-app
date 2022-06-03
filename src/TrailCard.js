@@ -4,14 +4,15 @@ import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
 	const match = useRouteMatch();
+
 	const renderDescription = (
-		<div key={trail.id} className="ui grid">
+		<div className="ui grid">
 			<div className="sixteen wide column">
 				<li className="card">
 					<NavLink to={`/traillist/${trail.id}`}>
 						<img src={trail.image} alt={trail.name} />
 
-						<h4>{trail.name}</h4>
+						<h5>{trail.trailName}</h5>
 						<p>
 							<strong>Location:</strong> {trail.location}
 						</p>
@@ -19,6 +20,9 @@ const TrailCard = ({ trail, trails }) => {
 							<strong>Difficulty:</strong> {trail.difficulty}
 						</p>
 					</NavLink>
+					<Route path={`${match.url}/:trailId`}>
+						<TrailDescription trails={trails} />
+					</Route>
 				</li>
 			</div>
 		</div>
@@ -27,9 +31,3 @@ const TrailCard = ({ trail, trails }) => {
 };
 
 export default TrailCard;
-
-{
-	/* <Route path={`${match.url}/:trailId`}>
-	<TrailDescription trails={trails} />
-</Route>; */
-}

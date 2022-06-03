@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewTrail = () => {
+const NewTrail = ({ handleSubmit }) => {
 	const [formData, setFormData] = useState({
 		image: "",
 		trailName: "",
@@ -10,33 +10,14 @@ const NewTrail = () => {
 	});
 
 	function handleChange(e) {
-		setFormData({
-			...formData,
-			[e.target.id]: e.target.value,
-		});
-
-		// console.log(formData);
-	}
-
-	function handleSubmit(e) {
-		e.preventDefault();
-		addTrail(formData);
-	}
-
-	function addTrail(newTrail) {
-		fetch("http://localhost:3004/trails", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(newTrail),
-		})
-			.then((res) => res.json)
-			.then((trail) => console.log(trail));
+		setFormData({ ...formData, [e.target.id]: e.target.value });
 	}
 
 	return (
-		<form className="create" onSubmit={handleSubmit}>
+		<form
+			className="create"
+			onSubmit={(e) => handleSubmit(e, formData, setFormData)}
+		>
 			<label className="create">Image</label>
 			<input
 				className="create"
