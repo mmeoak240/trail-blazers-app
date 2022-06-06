@@ -11,3 +11,5 @@ This application allows the user to search through all of the trails that have b
 
 ##Future features:
 My hope is to add the ability to filter the trail list based on difficulty so riders may find trails suited to their level of skill. I would like to add the ability for users to add trails to a favorites page so they may save trails that they enjoyed and plan on revisiting. Lastly I would like to add the ability for users to comment on the various trails to share their experiences or update trail conditions.
+
+blah blah blah
