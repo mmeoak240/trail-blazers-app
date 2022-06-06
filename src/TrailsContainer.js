@@ -1,36 +1,24 @@
-import React, { useState } from "react";
-import { Route, useRouteMatch } from "react-router-dom";
+import React from "react";
 import TrailCard from "./TrailCard";
-import TrailDescription from "./TrailDescription";
-import SortSearch from "./SortSearch";
+import Search from "./Search";
 
 const TrailsContainer = ({ trails, setTrails, search, setSearch }) => {
 	const displayTrails = trails.filter((trail) =>
 		trail.trailName.toLowerCase().includes(search.toLowerCase())
 	);
 
-	function sortDifficulty() {
-		setTrails(
-			trails.sort(function (a, b) {
-				return a - b;
-			})
-		);
-	}
-
 	return (
-		<div style={{ backgroundColor: "white" }}>
-			<h1 style={{ color: "sienna" }} className="center">
-				Blaze These Trails
-			</h1>
-			<SortSearch
-				search={search}
-				setSearch={setSearch}
-				sortDifficulty={sortDifficulty}
-			/>
+		<div className="trailsBg">
+			<div>
+				<h1 id="headingStyle" className="center">
+					Blaze These Trails
+				</h1>
+			</div>
+			<Search search={search} setSearch={setSearch} />
 
 			<div id="trailContainer">
 				{displayTrails.map((trail) => (
-					<TrailCard trail={trail} trails={trails} />
+					<TrailCard trail={trail} trails={trails} key={trail.id} />
 				))}
 			</div>
 		</div>

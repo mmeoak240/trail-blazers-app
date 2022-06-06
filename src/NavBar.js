@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 	return (
-		<div className="nav-wrapper">
+		<div className="navStick">
 			<nav style={{ textAlign: "center", background: "sienna" }}>
 				<NavLink style={{ marginRight: "30px", fontSize: "20px" }} to="/">
 					Home

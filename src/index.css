@@ -1,3 +1,30 @@
+#App {
+	text-align: center;
+}
+
+.homeBg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("https://images.unsplash.com/photo-1506316940527-4d1c138978a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW91bnRhaW4lMjBiaWtlfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+	min-width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.trailsBg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url("https://wallpaperaccess.com/full/312777.jpg");
+	min-width: 100%;
+	min-height: 100%;
+	position: sticky;
+	background-size: cover;
+	background-position: center;
+}
+
+#trailCard {
+	border-radius: 7px;
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +32,12 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.navStick {
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 code {
@@ -123,10 +156,33 @@ code {
 	border-color: black;
 	border-width: 1px;
 	background: sienna;
-	opacity: 0.3;
+	opacity: 0.8;
 }
 
 ::placeholder {
 	color: black;
 	opacity: 1;
+}
+
+#headingStyle {
+	color: sienna;
+	background-color: rgb(80, 4, 4);
+	border-radius: 8px;
+	width: 475px;
+	font-family: "Carter One", cursive;
+}
+
+#formHeading {
+	color: sienna;
+	border-radius: 8px;
+	width: 475px;
+	font-family: "Carter One", cursive;
+}
+
+#pStyle {
+	background-color: rgb(80, 4, 4, 0.8);
+	width: 700px;
+	margin-top: 100px;
+	border-radius: 7px;
+	font-family: "Oxygen", sans-serif;
 }
