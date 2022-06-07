@@ -14,4 +14,4 @@ function Search({ search, setSearch }) {
 	);
 }
 
-export default SortSearch;
+export default Search;
