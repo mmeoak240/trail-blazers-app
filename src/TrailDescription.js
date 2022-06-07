@@ -1,12 +1,7 @@
-import { useParams } from "react-router-dom";
-
-const TrailDescription = ({ trails }) => {
-	const params = useParams();
+const TrailDescription = ({ trail }) => {
 	return (
 		<div>
-			<p>
-				<strong>Description:</strong> {trails[params.trailId].description}
-			</p>
+			<p>{trail.description}</p>
 		</div>
 	);
 };
