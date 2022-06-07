@@ -8,29 +8,45 @@ import TrailsContainer from "./TrailsContainer";
 import NewTrail from "./NewTrail";
 
 function App() {
-	const [search, setSearch] = useState("");
-	function handleSort() {}
-
 	const [trails, setTrails] = useState([]);
+	const [search, setSearch] = useState("");
+
 	useEffect(() => {
 		fetch("http://localhost:3004/trails")
 			.then((r) => r.json())
 			.then((data) => setTrails(data));
 	}, []);
 
+	function handleSubmit(e, newTrail, setFormData) {
+		e.preventDefault();
+
+		fetch("http://localhost:3004/trails", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(newTrail),
+		})
+			.then((res) => res.json())
+			.then((newTrail) => setTrails([newTrail, ...trails]));
+		e.target.reset();
+		setFormData("");
+	}
+
 	return (
-		<div id="trailWrap" className="backgroundImg">
+		<div id="trailWrap">
 			<NavBar />
 			<Switch>
 				<Route path="/traillist">
 					<TrailsContainer
 						trails={trails}
+						setTrails={setTrails}
 						search={search}
 						setSearch={setSearch}
 					/>
 				</Route>
 				<Route path="/newtrail">
-					<NewTrail />
+					<NewTrail handleSubmit={handleSubmit} />
 				</Route>
 				<Route exact path="/">
 					<Home trails={trails} />
