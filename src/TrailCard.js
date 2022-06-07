@@ -1,30 +1,32 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import TrailDescription from "./TrailDescription";
 
 const TrailCard = ({ trail, trails }) => {
+	const [descriptionFlag, setDescriptionFlag] = useState(false);
 	const match = useRouteMatch();
-	console.log(trails.id);
+
+	const handleClick = () => {
+		setDescriptionFlag((descriptionFlag) => !descriptionFlag);
+	};
 
 	const renderDescription = (
-		<div key={trail.id} className="ui grid">
+		<div className="ui grid">
 			<div className="sixteen wide column">
-				<li className="card">
-					<NavLink to={`/traillist/${trail.id}`}>
-						<img src={trail.image} alt={trail.name} />
+				<li className="card" id="trailCard">
+					<img src={trail.image} alt={trail.name} id="trailCard" />
 
-						<h5>{trail.trailName}</h5>
-						<p>
-							<strong>Location:</strong> {trail.location}
-						</p>
-						<p>
-							<strong>Difficulty:</strong> {trail.difficulty}
-						</p>
-					</NavLink>
-					<Route path={`${match.url}/:trailId`}>
-						<TrailDescription trails={trails} />
-					</Route>
+					<h5>{trail.trailName}</h5>
+					<p>
+						<strong>Location:</strong> {trail.location}
+					</p>
+					<p>
+						<strong>Difficulty:</strong> {trail.difficulty}
+					</p>
+					{descriptionFlag ? <TrailDescription trail={trail} /> : null}
+					<button onClick={handleClick}>
+						{descriptionFlag ? "Hide Description" : "Description"}
+					</button>
 				</li>
 			</div>
 		</div>
@@ -33,3 +35,4 @@ const TrailCard = ({ trail, trails }) => {
 };
 
 export default TrailCard;
+
